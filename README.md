@@ -148,6 +148,11 @@ AIML-Project-RollNo-2302220100190/
 
 ---
 
+## Live Demo
+
+Streamlit Application:
+https://student-performance-prediction-sr.streamlit.app/
+
 ## Conclusion
 
 This project demonstrates a complete Machine Learning workflow for predicting student performance.
