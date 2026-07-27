@@ -1,12 +1,19 @@
 # Student Performance Prediction 📊
 
+## 🚀 Live Demo
+
+Streamlit Application:  
+https://student-performance-prediction-sr.streamlit.app/
+
+---
+
 ## Problem Statement
 
 The objective of this project is to predict a student's mathematics score using demographic and academic information.
 
-The project uses factors such as gender, parental education level, lunch type, test preparation course, reading score, and writing score to analyze student performance and identify important factors affecting mathematics scores.
+The project analyzes factors such as gender, lunch type, test preparation course, reading score, and writing score to understand student performance.
 
-A Machine Learning regression model using Linear Regression is developed to predict mathematics scores.
+A Machine Learning regression model using **Linear Regression** is developed to predict mathematics scores based on these factors.
 
 ---
 
@@ -15,11 +22,12 @@ A Machine Learning regression model using Linear Regression is developed to pred
 - **Name:** Students Performance in Exams
 - **Source:** Kaggle
 - **Link:** https://www.kaggle.com/datasets/spscientist/students-performance-in-exams
-- **Rows / Columns:** 1000 rows, 8 columns
+- **Dataset Size:** 1000 rows and 8 columns
 
 The dataset contains information about students' demographic background and academic performance.
 
 ### Features:
+
 - Gender
 - Race/Ethnicity
 - Parental level of education
@@ -29,11 +37,12 @@ The dataset contains information about students' demographic background and acad
 - Writing score
 
 ### Target Variable:
+
 - Math score
 
 ---
 
-## Tools Used
+## Tools & Technologies Used
 
 - Python
 - Pandas
@@ -42,6 +51,7 @@ The dataset contains information about students' demographic background and acad
 - Seaborn
 - Scikit-learn
 - Jupyter Notebook
+- Streamlit
 
 ---
 
@@ -51,19 +61,20 @@ The dataset contains information about students' demographic background and acad
 2. Data Cleaning and Validation
 3. Exploratory Data Analysis (EDA)
 4. Feature Engineering
-5. Data Encoding
+5. Categorical Data Encoding
 6. Train-Test Split
-7. Model Building (Linear Regression)
+7. Model Training using Linear Regression
 8. Model Evaluation
 9. Feature Importance Analysis
+10. Model Deployment using Streamlit
 
 ---
 
-## Results
+## Model Performance
 
-### Model Performance
+### Machine Learning Model
 
-- **Model:** Linear Regression
+**Model Used:** Linear Regression
 
 ### Evaluation Metrics:
 
@@ -71,44 +82,47 @@ The dataset contains information about students' demographic background and acad
 - **RMSE:** 5.39
 - **R² Score:** 0.88
 
-The model explains approximately 88% of the variation in students' mathematics scores.
+The model explains approximately **88% of the variation** in students' mathematics scores.
 
 ---
 
-## Top Factors Affecting Student Performance
+## Key Insights
 
 - Reading and writing scores show a strong positive relationship with mathematics scores.
-- Students who completed the test preparation course generally showed better performance.
-- Lunch type shows an association with student academic outcomes.
-- Parental education level can influence student learning support and performance.
-- Linear Regression coefficients were used to identify important factors affecting predictions.
+- Students who completed the test preparation course generally achieved better math scores.
+- Lunch type shows an association with student performance.
+- Linear Regression coefficients were used to understand the contribution of different features toward prediction.
 
 ---
 
 ## Project Structure
 
+```
 AIML-Project-RollNo-2302220100190/
 
+│
 ├── Dataset/
-│ └── StudentsPerformance.csv
+│   └── StudentsPerformance.csv
 │
 ├── Images/
-│ ├── gender_distribution.png
-│ ├── correlation_heatmap.png
-│ ├── test_preparation.png
-│ ├── lunch_vs_math_score.png
-│ ├── actual_vs_predicted.png
-│ └── feature_importance.png
+│   ├── gender_distribution.png
+│   ├── correlation_heatmap.png
+│   ├── test_preparation.png
+│   ├── lunch_vs_math_score.png
+│   ├── actual_vs_predicted.png
+│   └── feature_importance.png
 │
 ├── Notebook/
-│ └── Student_Performance_Prediction.ipynb
+│   └── Student_Performance_Prediction.ipynb
+│
+├── app.py
 │
 ├── student_performance_model.pkl
 │
 ├── README.md
 │
 └── requirements.txt
-
+```
 
 ---
 
@@ -142,27 +156,23 @@ AIML-Project-RollNo-2302220100190/
 
 ## Future Improvements
 
-- Try other Machine Learning models and compare performance.
-- Deploy the model using a simple web application.
-- Add more student-related features for better prediction.
+- Try different Machine Learning algorithms and compare performance.
+- Improve prediction accuracy using advanced models.
+- Add more relevant student-related features.
+- Enhance the Streamlit application interface.
 
 ---
 
-## Live Demo
-
-Streamlit Application:
-https://student-performance-prediction-sr.streamlit.app/
-
 ## Conclusion
 
-This project demonstrates a complete Machine Learning workflow for predicting student performance.
+This project demonstrates an end-to-end Machine Learning workflow for predicting student mathematics performance.
 
-The process includes data cleaning, exploratory data analysis, feature engineering, categorical data encoding, model training, evaluation, and feature importance analysis.
+The process includes data cleaning, exploratory data analysis, feature engineering, categorical encoding, model training, evaluation, and deployment.
 
-The Linear Regression model achieved an R² score of approximately 0.88, showing that academic factors such as reading and writing scores have a strong relationship with mathematics performance.
+The Linear Regression model achieved an R² score of approximately **0.88**, showing that academic factors such as reading and writing scores are strong indicators of mathematics performance.
 
 ---
 
 ## Author
 
-Supriya Raj
+**Supriya Raj**

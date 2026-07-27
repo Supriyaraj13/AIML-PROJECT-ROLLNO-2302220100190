@@ -12,25 +12,12 @@ st.write(
     "Predict a student's Mathematics Score using the trained Linear Regression model."
 )
 
-# ---------------- INPUTS ----------------
 
-gender = st.selectbox("Gender", ["female", "male"])
+# Inputs
 
-race = st.selectbox(
-    "Race/Ethnicity",
-    ["group A", "group B", "group C", "group D", "group E"]
-)
-
-parent = st.selectbox(
-    "Parental Level of Education",
-    [
-        "associate's degree",
-        "bachelor's degree",
-        "high school",
-        "master's degree",
-        "some college",
-        "some high school"
-    ]
+gender = st.selectbox(
+    "Gender",
+    ["female", "male"]
 )
 
 lunch = st.selectbox(
@@ -57,45 +44,23 @@ writing = st.number_input(
     value=70
 )
 
-# ---------------- PREDICTION ----------------
+
+# Prediction
 
 if st.button("Predict Math Score"):
 
-    data = {
-        "reading_score": reading,
-        "writing_score": writing,
-        "test_prep_completed": 1 if test_prep == "completed" else 0,
-        "gender_male": 1 if gender == "male" else 0,
+    input_data = {
+    "reading_score": reading,
+    "writing_score": writing,
+    "gender_male": 1 if gender == "male" else 0,
+    "lunch_standard": 1 if lunch == "standard" else 0,
+    "test_preparation_course_none": 1 if test_prep == "none" else 0
+}
 
-        "race_ethnicity_group B": 1 if race == "group B" else 0,
-        "race_ethnicity_group C": 1 if race == "group C" else 0,
-        "race_ethnicity_group D": 1 if race == "group D" else 0,
-        "race_ethnicity_group E": 1 if race == "group E" else 0,
-
-        "parental_level_of_education_bachelor's degree":
-            1 if parent == "bachelor's degree" else 0,
-
-        "parental_level_of_education_high school":
-            1 if parent == "high school" else 0,
-
-        "parental_level_of_education_master's degree":
-            1 if parent == "master's degree" else 0,
-
-        "parental_level_of_education_some college":
-            1 if parent == "some college" else 0,
-
-        "parental_level_of_education_some high school":
-            1 if parent == "some high school" else 0,
-
-        "lunch_standard":
-            1 if lunch == "standard" else 0,
-
-        "test_preparation_course_none":
-            1 if test_prep == "none" else 0,
-    }
-
-    input_df = pd.DataFrame([data])
+    input_df = pd.DataFrame([input_data])
 
     prediction = model.predict(input_df)
 
-    st.success(f"Predicted Mathematics Score: {prediction[0]:.2f}")
+    st.success(
+        f"Predicted Mathematics Score: {prediction[0]:.2f}"
+    )
