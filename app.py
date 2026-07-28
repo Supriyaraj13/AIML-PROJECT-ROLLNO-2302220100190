@@ -52,9 +52,9 @@ if st.button("Predict Math Score"):
     input_data = {
     "reading_score": reading,
     "writing_score": writing,
-    "gender_male": 1 if gender == "male" else 0,
+    "gender_male": 0 if gender == "male" else 1,
     "lunch_standard": 1 if lunch == "standard" else 0,
-    "test_preparation_course_none": 1 if test_prep == "none" else 0
+    "test_preparation_course_none": 0 if test_prep == "none" else 1
 }
 
     input_df = pd.DataFrame([input_data])
